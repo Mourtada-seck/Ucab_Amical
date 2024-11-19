@@ -1,0 +1,7 @@
+{
+    "explorer.autoReveal": true,
+    "explorer.confirmDelete": true,
+    "explorer.excludeGitIgnore": false,
+    "explorer.sortOrderReverse": false,
+    "explorer.fileNesting.expand": false
+}

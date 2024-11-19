@@ -1,0 +1,51 @@
+RewriteEngine On
+RewriteRule ^home$ index.php
+RewriteRule ^login$ login.php
+RewriteRule ^admin$ admin.php
+RewriteRule ^fqaIndex$ fqaIndex.php
+
+RewriteRule ^pageGalerie$ view/sections/vitrine/galarie.php
+
+RewriteRule ^proposTraductiion$ view/sections/vitrine/aproposTraduction.php
+
+RewriteRule ^Apropos$ view/sections/vitrine/apropos.php
+RewriteRule ^Evenements$ view/sections/vitrine/evenements.php
+RewriteRule ^Faq$ view/sections/vitrine/faq.php
+RewriteRule ^Galarie$ view/sections/vitrine/galarie.php
+RewriteRule ^GalarieFolio$ view/sections/vitrine/galarieFolio.php
+RewriteRule ^Contact$ view/sections/vitrine/contact.php
+
+RewriteRule ^Galariepage$ view/sections/vitrine/galarie.php
+
+
+# Controller 
+RewriteRule ^galerieController$ controller/galerieController.php
+RewriteRule ^userController$ controller/userController.php
+RewriteRule ^evenmentController$ controller/evenmentController.php
+RewriteRule ^loginController$ controller/loginController.php
+RewriteRule ^faqController$ controller/faqController.php
+
+
+
+# View Galerie photo
+RewriteRule ^addGalerie$ view/pages/admin/galeries/add.php
+RewriteRule ^corbeilleGalerie$ view/pages/admin/galeries/corbeille.php
+RewriteRule ^listeGalerie$ view/pages/admin/galeries/liste.php
+
+# View User
+RewriteRule ^listeUser$ view/pages/admin/user/liste.php
+RewriteRule ^addUser$ view/pages/admin/user/add.php
+RewriteRule ^corbeilleUser$ view/pages/admin/user/corbeille.php
+RewriteRule ^editUser$ view/pages/admin/user/edit.php
+
+# View Evennment
+RewriteRule ^listeEvenment$ view/pages/admin/evenment/liste.php
+RewriteRule ^addEvenment$ view/pages/admin/evenment/add.php
+RewriteRule ^corbeilleEvenment$ view/pages/admin/evenment/corbeille.php
+RewriteRule ^editEvenment$ view/pages/admin/evenment/edit.php
+
+# faqs
+RewriteRule ^listeFaq$ view/pages/admin/Faq/liste.php
+RewriteRule ^addFaq$ view/pages/admin/Faq/add.php
+RewriteRule ^corbeilleFaq$ view/pages/admin/Faq/corbeille.php
+RewriteRule ^editFaq$ view/pages/admin/Faq/edit.php
