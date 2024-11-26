@@ -46,7 +46,7 @@ function adduser($nom, $prenom, $adresse, $email, $telephone,  $photo, $role, $p
 function edituser($id_user, $nom, $prenom, $adresse, $email, $telephone,  $photo, $role, $password)
 {
     $date_Actuelle = date("Y-m-d");
-    $requete = "UPDATE users SET nom='$nom', prenom='$prenom',adresse='$adresse',email='$email',
+    $requete = "UPDATE users SET nom='$nom', prenom='$prenom', adresse='$adresse', email='$email',
     telephone='$telephone', photo='$photo', password='$password', role='$role',
     updated_at='$date_Actuelle', updated_by=1 WHERE id_user='$id_user'";
     try {

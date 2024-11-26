@@ -1,5 +1,4 @@
 <?php
-
     //Permet de se connecter a la Base de données
     function getConnexion()
     {

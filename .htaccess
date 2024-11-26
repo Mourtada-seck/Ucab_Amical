@@ -49,3 +49,10 @@ RewriteRule ^listeFaq$ view/pages/admin/Faq/liste.php
 RewriteRule ^addFaq$ view/pages/admin/Faq/add.php
 RewriteRule ^corbeilleFaq$ view/pages/admin/Faq/corbeille.php
 RewriteRule ^editFaq$ view/pages/admin/Faq/edit.php
+
+# contacts
+RewriteRule ^listeContact$ view/pages/admin/contact/listeContact.php
+RewriteRule ^addContact$ view/pages/admin/contact/addContact.php
+RewriteRule ^contactController$ controller/contactControler.php
+
+RewriteRule ^contact$ view/sections/vitrine/contact.php

@@ -10,7 +10,7 @@ if (isset($_POST['frmAddUser'])) {
     $nom = $_POST["nom"];
     $prenom = $_POST["prenom"];
     $adresse = $_POST["adresse"];
-    $mail = $_POST["mail"];
+    $email = $_POST["email"];
     $telephone = $_POST["telephone"];
     $nomPhoto = $_FILES['photo']['name'];
     $password= $_POST["password"];
@@ -20,7 +20,7 @@ if (isset($_POST['frmAddUser'])) {
     $file_tmp_name = $_FILES['photo']['tmp_name'];
     move_uploaded_file($file_tmp_name, "../public/images/$nomPhoto");
 
-    $reponseBD = adduser($nom, $prenom, $adresse, $mail, $telephone, $nomPhoto, $password, $role);
+    $reponseBD = adduser($nom, $prenom, $adresse, $email, $telephone, $nomPhoto, $password, $role);
 
     if ($reponseBD == 1) {
         header("location:listeUser");
@@ -39,7 +39,7 @@ if (isset($_POST['frmEditUser'])) {
     $nom = $_POST["nom"];
     $prenom = $_POST["prenom"];
     $adresse = $_POST["adresse"];
-    $mail = $_POST["mail"];
+    $email = $_POST["email"];
     $telephone = $_POST["telephone"];
     $nomPhoto = $_FILES['photo']['name'];
     $password= $_POST["password"];
@@ -54,7 +54,7 @@ if (isset($_POST['frmEditUser'])) {
     {
         $nomPhoto = getByIduser($_POST['idUser'])->fetch()['photo'];
     }
-    $reponseBD = adduser($nom, $prenom, $adresse, $mail, $telephone, $nomPhoto, $password, $role);
+    $reponseBD = adduser($nom, $prenom, $adresse, $email, $telephone, $nomPhoto, $password, $role);
 
     if ($reponseBD == 1) {
         header("location:listeUser");
