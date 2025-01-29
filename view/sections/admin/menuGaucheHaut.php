@@ -34,7 +34,7 @@
 
                 <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
                     <i class="bi bi-bell"></i>
-                    <span class="badge bg-primary badge-number">4</span>
+                    <span class="badge bg-primary badge-number"><?= count($listeContacts) ?></span>
                 </a><!-- End Notification Icon -->
 
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
@@ -46,51 +46,22 @@
                         <hr class="dropdown-divider">
                     </li>
 
+                    <?php foreach ($listeContacts as $contact): ?>
                     <li class="notification-item">
                         <i class="bi bi-exclamation-circle text-warning"></i>
                         <div>
-                            <h4>chekhouna</h4>
-                            <p>description</p>
-                            <p>30 min. plus tards</p>
+                            <h4><?= htmlspecialchars($contact['nom']) ?></h4>
+                            <p><?= htmlspecialchars($contact['objet']) ?></p>
+                            <p>
+                                <?php $date_Actuelle = date("Y-m-d"); ?>
+                                <?= htmlspecialchars($date_Actuelle); ?>
+                            </p>
                         </div>
                     </li>
+                    <?php endforeach; ?>
 
                     <li>
                         <hr class="dropdown-divider">
-                    </li>
-
-                    <li class="notification-item">
-                        <i class="bi bi-x-circle text-danger"></i>
-                        <div>
-                            <h4>chekhouna</h4>
-                            <p>description</p>
-                            <p>30 min. plus tards</p>
-                        </div>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-
-                    <li class="notification-item">
-                        <i class="bi bi-check-circle text-success"></i>
-                        <div>
-                            <h4>chekhouna</h4>
-                            <p>description</p>
-                            <p>30 min. plus tards</p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-
-                    <li class="notification-item">
-                        <i class="bi bi-info-circle text-primary"></i>
-                        <div>
-                            <h4>chekhouna</h4>
-                            <p>description</p>
-                            <p>30 min. plus tards</p>
-                        </div>
                     </li>
 
                     <li>
@@ -114,7 +85,8 @@
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
                     <li class="dropdown-header">
                         Vous avez <?= count($listeContacts) ?> nouveaux messages
-                        <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Voir tout</span></a>
+                        <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Voir
+                                tout</span></a>
                     </li>
                     <hr class="dropdown-divider">
 

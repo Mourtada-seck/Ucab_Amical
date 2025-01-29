@@ -154,7 +154,7 @@
                         <!-- messsage -->
                         <div class="col-md-12 mt-3">
                             <textarea required name="message" id="message" rows="6" class="form-control placeholder="
-                                Votre message""></textarea>
+                                Votre message=""></textarea>
                         </div>
                         <!-- Botton d'envoie -->
                         <div class="col-md-12 text-center">

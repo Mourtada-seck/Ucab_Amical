@@ -28,11 +28,9 @@
         require_once("view/sections/vitrine/faq.php")
     ?>
      </div>
-     <!-- <div id="galarieFolio">
-    <?php
-        // require_once("view/sections/vitrine/galarieFolio.php")
-    ?>
-  </div> -->
+
+     <!-- ======= Section Equipe ======= -->
+     <?php require_once("view/sections/vitrine/equipes.php")?>
 
 
 
